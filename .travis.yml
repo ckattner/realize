@@ -1,6 +1,6 @@
 env:
   global:
-    - CC_TEST_REPORTER_ID=
+    - CC_TEST_REPORTER_ID=f66c5e9edc96c1e1f0d1ecd7b8836a8ce9f1d69cef678d4c9a3abc0af490d001
 language: ruby
 services:
   - mysql
@@ -14,9 +14,6 @@ before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build
-  - cp spec/config/realize.yaml.ci spec/config/realize.yaml
-  - cat spec/db/database.sql | mysql
-  - cat spec/db/tables.sql | mysql
 script:
   - bundle exec rubocop
   - bundle exec rspec spec --format documentation

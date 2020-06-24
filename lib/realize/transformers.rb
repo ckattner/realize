@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+require_relative 'collection/at_index'
+require_relative 'collection/first'
+require_relative 'collection/last'
 require_relative 'collection/sort'
 require_relative 'filter/by_key_record_value'
 require_relative 'filter/by_key_value'
@@ -25,6 +28,9 @@ module Realize
     acts_as_hashable_factory
 
     register '',                               Value::Verbatim
+    register 'r/collection/at_index',          Collection::AtIndex
+    register 'r/collection/first',             Collection::First
+    register 'r/collection/last',              Collection::Last
     register 'r/collection/sort',              Collection::Sort
     register 'r/filter/by_key_record_value',   Filter::ByKeyRecordValue
     register 'r/filter/by_key_value',          Filter::ByKeyValue

@@ -62,6 +62,9 @@ Here is a list of each built-in transformer, their options, and what their funct
 
 #### Collection-oriented Transformers
 
+* **r/collection/at_index** [index]:  Takes an array (or coerces value to an array) and returns the value at the given index position.
+* **r/collection/first** []:  Takes an array (or coerces value to an array) and returns the value at the first index position.
+* **r/collection/last** []:  Takes an array (or coerces value to an array) and returns the value at the last index position.
 * **r/collection/sort** [key, direction]:  Takes an array (or coerces value to an array) and sort it either ascending or descending by some defined key's value.
 
 #### Filtering Transformers

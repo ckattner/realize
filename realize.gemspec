@@ -11,8 +11,8 @@ Gem::Specification.new do |s|
     Derive and transform a value using a configuration-first pipeline.
   DESCRIPTION
 
-  s.authors     = ['Matthew Ruggio']
-  s.email       = ['mruggio@bluemarblepayroll.com']
+  s.authors     = ['Matthew Ruggio', 'Dan Dewar']
+  s.email       = ['mruggio@bluemarblepayroll.com', 'ddewar@bluemarblepayroll.com']
   s.files       = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   s.bindir      = 'exe'
   s.executables = []

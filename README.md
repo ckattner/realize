@@ -83,12 +83,12 @@ Here is a list of each built-in transformer, their options, and what their funct
 
 #### Value-oriented Transformers
 
-* **r/logical/blank** []: Always return a blank string.
-* **r/logical/map** [values]: Do a lookup on the value using the `values` hash.  If a value is found, then its corresponding value is returned.  If it isn't then the input is returned.
-* **r/logical/null** []: Always returns null.
-* **r/logical/resolve** [key]: Dynamically resolves a value based on the record's key.  It uses the [Objectable](https://github.com/bluemarblepayroll/objectable) library by default, which provides some goodies like dot-notation for nested objects and type-insensitivity (works for Ruby objects, hashes, structs, etc.)
-* **r/logical/static** [value]: Always returns a hard-coded value.
-* **r/logical/verbatim** []: Default transformer, simply echos back the input.
+* **r/value/blank** []: Always return a blank string.
+* **r/value/map** [values]: Do a lookup on the value using the `values` hash.  If a value is found, then its corresponding value is returned.  If it isn't then the input is returned.
+* **r/value/null** []: Always returns null.
+* **r/value/resolve** [key]: Dynamically resolves a value based on the record's key.  It uses the [Objectable](https://github.com/bluemarblepayroll/objectable) library by default, which provides some goodies like dot-notation for nested objects and type-insensitivity (works for Ruby objects, hashes, structs, etc.)
+* **r/value/static** [value]: Always returns a hard-coded value.
+* **r/value/verbatim** []: Default transformer, simply echos back the input.
 
 ### Plugging in Transformers
 

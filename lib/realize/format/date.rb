@@ -30,12 +30,10 @@ module Realize
         return nil if value.to_s.empty?
 
         date_time =
-          if value.respond_to?(:to_datetime)
-            value.to_datetime
-          elsif input_format?
+          if input_format?
             DateTime.strptime(value, input_format)
           else
-            DateTime.parse(value)
+            DateTime.parse(value.to_s)
           end
 
         date_time.strftime(output_format)

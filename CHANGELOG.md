@@ -1,4 +1,4 @@
-# 1.1.1 (TBD)
+# 1.1.1 (September 9th, 2020)
 
 Fixes:
 

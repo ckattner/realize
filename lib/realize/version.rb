@@ -8,5 +8,5 @@
 #
 
 module Realize
-  VERSION = '1.1.1-alpha'
+  VERSION = '1.1.1'
 end

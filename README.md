@@ -13,7 +13,7 @@ It is currently used in production at Blue Marble to power the transformation pi
 To install through Rubygems:
 
 ````
-gem install install realize
+gem install realize
 ````
 
 You can also add this to your Gemfile:

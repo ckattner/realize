@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'pry'
+require 'set'
 
 unless ENV['DISABLE_SIMPLECOV'] == 'true'
   require 'simplecov'

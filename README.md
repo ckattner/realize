@@ -84,13 +84,20 @@ Here is a list of each built-in transformer, their options, and what their funct
 
 * **r/logical/switch** [cases, default_transformers, key]: Provides a value-based logic branching.  If a value matches a specific case, the specific cases transformers will be executed.  If it does not match any case then the default_transformers will be executed.
 
+#### Type Transformers
+
+* **r/type/boolean** [nullable]: Returns `true` if the input is 'truthy', `false` if not.  By default nullable is false, which means a nil input will return false.  Changing this to true will return nil if nil is passed in.  A 'truthy' value is defined as matching: true, t, yes, y, or 1 (case-insensitive).
+* **r/type/string** []: Calls `#to_s` on the value so the returned value is guaranteed to be a string type.
+
 #### Value-oriented Transformers
 
 * **r/value/blank** []: Always return a blank string.
 * **r/value/map** [values]: Do a lookup on the value using the `values` hash.  If a value is found, then its corresponding value is returned.  If it isn't then the input is returned.
+* **r/value/now** [utc_offset]: Returns a Time object, defaulting to UTC offset.  You can optionally pass in a different offset in the FORM: "+/-HH:MM"
 * **r/value/null** []: Always returns null.
 * **r/value/resolve** [key]: Dynamically resolves a value based on the record's key.  It uses the [Objectable](https://github.com/bluemarblepayroll/objectable) library by default, which provides some goodies like dot-notation for nested objects and type-insensitivity (works for Ruby objects, hashes, structs, etc.)
 * **r/value/static** [value]: Always returns a hard-coded value.
+* **r/value/uuid** []: Returns a new 36 character UUID (i.e. 6967fec6-bbde-4497-82d9-55ccc7b87cd0)
 * **r/value/verbatim** []: Default transformer, simply echos back the input.
 
 ### Plugging in Transformers

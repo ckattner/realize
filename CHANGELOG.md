@@ -1,3 +1,12 @@
+# 1.2.0 (October 6th, 2020)
+
+New Transformers:
+
+* b/type/boolean
+* b/type/string
+* b/value/now
+* b/value/uuid
+
 # 1.1.1 (September 9th, 2020)
 
 Fixes:

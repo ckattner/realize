@@ -79,6 +79,8 @@ Here is a list of each built-in transformer, their options, and what their funct
 * **r/format/date** [input_format, output_format]: Parses the incoming value into a Time object using the configured input_format and outputs it as formatted by the configured output_format.
 * **r/format/remove_whitespace** []: Removes all whitespace from the incoming value.
 * **r/format/string_replace** [original, replacement]: Replaces all occurrences of the configured original value with the replacement value.
+* **r/format/string_template** [expression, separator, use_record]: String interpolate an expression using either the record or passed in value.  Nested objects can be handled (i.e. key paths like dot-notation) by passing in a separator.
+* **r/format/substring** [start_index, end_index, exclusive]: Cut a string in a given range.  All options are optional.  If a start_index is not provided, the beginning of the string is used.  If no end_index is specified then the end of the string is used.  If exclusive is set to true then the last index position will not be included.  For example: "hellofriend" with a start_index of 0, an end_index of 5, and exclusive as true would yield: "hello".  If exclusive was false then it would yield "hellof"
 
 #### Logical Transformers
 

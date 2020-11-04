@@ -30,12 +30,13 @@ Gem::Specification.new do |s|
 
   s.add_dependency('acts_as_hashable', '~>1', '>=1.2.0')
   s.add_dependency('objectable', '~>1')
+  s.add_dependency('stringento', '~>2.1')
 
   s.add_development_dependency('guard-rspec', '~>4.7')
   s.add_development_dependency('pry', '~>0')
   s.add_development_dependency('rake', '~> 13')
   s.add_development_dependency('rspec')
-  s.add_development_dependency('rubocop', '~>0.79.0')
+  s.add_development_dependency('rubocop', '~>1.1')
   s.add_development_dependency('simplecov', '~>0.17.0')
   s.add_development_dependency('simplecov-console', '~>0.6.0')
 end

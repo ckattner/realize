@@ -14,7 +14,7 @@ module Realize
 
       attr_reader :cases, :default_transformers, :key
 
-      def initialize(cases: [], default_transformers: [], key:)
+      def initialize(key:, cases: [], default_transformers: [])
         raise ArgumentError, 'key is required' if key.to_s.empty?
 
         @cases                = Case.array(cases)

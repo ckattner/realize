@@ -10,6 +10,7 @@
 require 'acts_as_hashable'
 require 'objectable'
 require 'securerandom'
+require 'stringento'
 require 'time'
 
 require_relative 'realize/arrays'

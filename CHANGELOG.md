@@ -1,11 +1,18 @@
+# 1.3.0 (November 4th, 2020)
+
+New Transformers:
+
+* r/format/string_template
+* r/format/substring
+
 # 1.2.0 (October 6th, 2020)
 
 New Transformers:
 
-* b/type/boolean
-* b/type/string
-* b/value/now
-* b/value/uuid
+* r/type/boolean
+* r/type/string
+* r/value/now
+* r/value/uuid
 
 # 1.1.1 (September 9th, 2020)
 

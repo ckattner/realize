@@ -2,6 +2,34 @@
 
 require 'spec_helper'
 
+TEST_CASES = [
+  [nil, false],
+  [true, true],
+  ['t', true],
+  ['true', true],
+  ['TRUE', true],
+  ['True', true],
+  ['1', true],
+  ['Y', true],
+  ['y', true],
+  ['yes', true],
+  ['YES', true],
+  ['Yes', true],
+  [false, false],
+  ['f', false],
+  ['false', false],
+  ['FALSE', false],
+  ['False', false],
+  ['0', false],
+  ['N', false],
+  ['n', false],
+  ['no', false],
+  ['NO', false],
+  ['No', false],
+  ['', false],
+  [{}, false]
+].freeze
+
 RSpec.describe Realize::Type::Boolean do
   let(:record)     { {} }
   let(:resolver)   { nil }
@@ -21,34 +49,6 @@ RSpec.describe Realize::Type::Boolean do
     end
 
     context 'not nullable' do
-      TEST_CASES = [
-        [nil, false],
-        [true, true],
-        ['t', true],
-        ['true', true],
-        ['TRUE', true],
-        ['True', true],
-        ['1', true],
-        ['Y', true],
-        ['y', true],
-        ['yes', true],
-        ['YES', true],
-        ['Yes', true],
-        [false, false],
-        ['f', false],
-        ['false', false],
-        ['FALSE', false],
-        ['False', false],
-        ['0', false],
-        ['N', false],
-        ['n', false],
-        ['no', false],
-        ['NO', false],
-        ['No', false],
-        ['', false],
-        [{}, false]
-      ].freeze
-
       let(:nullable) { false }
 
       TEST_CASES.each do |test_case|

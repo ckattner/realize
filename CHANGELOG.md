@@ -1,4 +1,4 @@
-# 1.4.0 (TBD)
+# 1.4.0 (November 16th, 2020)
 
 New Transformers:
 

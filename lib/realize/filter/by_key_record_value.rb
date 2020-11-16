@@ -1,5 +1,12 @@
 # frozen_string_literal: true
 
+#
+# Copyright (c) 2020-present, Blue Marble Payroll, LLC
+#
+# This source code is licensed under the MIT license found in the
+# LICENSE file in the root directory of this source tree.
+#
+
 module Realize
   class Filter
     # This transformer can take an array or a hash (put in array) and it understands how to

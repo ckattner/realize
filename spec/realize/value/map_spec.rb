@@ -1,5 +1,12 @@
 # frozen_string_literal: true
 
+#
+# Copyright (c) 2020-present, Blue Marble Payroll, LLC
+#
+# This source code is licensed under the MIT license found in the
+# LICENSE file in the root directory of this source tree.
+#
+
 require 'spec_helper'
 
 RSpec.describe Realize::Value::Map do
@@ -10,7 +17,7 @@ RSpec.describe Realize::Value::Map do
     {
       '1' => 'STRING1',
       1 => 'NUMBER1',
-      :'1' => 'SYMBOL1',
+      a1: 'SYMBOL1',
       nil => 'NIL',
       'aaa' => 'LOWERCASE',
       'AAA' => 'UPPERCASE'
@@ -59,7 +66,7 @@ RSpec.describe Realize::Value::Map do
       end
 
       it 'matches Symbol key' do
-        value     = :'1'
+        value     = :a1
         expected  = 'SYMBOL1'
 
         expect(subject.transform(resolver, value, time, values)).to eq(expected)

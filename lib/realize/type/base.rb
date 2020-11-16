@@ -8,13 +8,17 @@
 #
 
 module Realize
-  class Collection
-    # Transformer to get the first item of a collection
-    class First
+  class Type
+    # Common code for all Type Transformer subclasses.
+    class Base
       acts_as_hashable
 
-      def transform(resolver, value, time, record)
-        AtIndex.new(index: 0).transform(resolver, value, time, record)
+      attr_reader :nullable
+
+      def initialize(nullable: false)
+        @nullable = nullable || false
+
+        freeze
       end
     end
   end

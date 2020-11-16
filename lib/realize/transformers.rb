@@ -1,5 +1,12 @@
 # frozen_string_literal: true
 
+#
+# Copyright (c) 2020-present, Blue Marble Payroll, LLC
+#
+# This source code is licensed under the MIT license found in the
+# LICENSE file in the root directory of this source tree.
+#
+
 require_relative 'collection/at_index'
 require_relative 'collection/first'
 require_relative 'collection/last'
@@ -11,10 +18,12 @@ require_relative 'filter/by_key_value_presence'
 require_relative 'filter/inactive'
 
 require_relative 'format/date'
+require_relative 'format/lowercase'
 require_relative 'format/remove_whitespace'
 require_relative 'format/string_replace'
 require_relative 'format/string_template'
 require_relative 'format/substring'
+require_relative 'format/uppercase'
 
 require_relative 'logical/switch'
 
@@ -49,10 +58,12 @@ module Realize
     register 'r/filter/inactive',              Filter::Inactive
 
     register 'r/format/date',                  Format::Date
+    register 'r/format/lowercase',             Format::Lowercase
     register 'r/format/remove_whitespace',     Format::RemoveWhitespace
     register 'r/format/string_replace',        Format::StringReplace
     register 'r/format/string_template',       Format::StringTemplate
     register 'r/format/substring',             Format::Substring
+    register 'r/format/uppercase',             Format::Uppercase
 
     register 'r/logical/switch',               Logical::Switch
 

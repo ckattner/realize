@@ -8,13 +8,13 @@
 #
 
 module Realize
-  class Collection
-    # Transformer to get the first item of a collection
-    class First
+  class Format
+    # Call #to_s.downcase on the value and return result.
+    class Uppercase
       acts_as_hashable
 
-      def transform(resolver, value, time, record)
-        AtIndex.new(index: 0).transform(resolver, value, time, record)
+      def transform(_resolver, value, _time, _record)
+        value.to_s.upcase
       end
     end
   end

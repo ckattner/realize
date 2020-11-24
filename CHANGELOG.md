@@ -1,3 +1,14 @@
+# 1.5.0 (TBD)
+
+New Transformers:
+
+* r/file/basename
+* r/file/extname
+* r/format/pad
+* r/format/sha256
+* r/format/split
+* r/type/array
+
 # 1.4.0 (November 16th, 2020)
 
 New Transformers:

@@ -12,6 +12,9 @@ require_relative 'collection/first'
 require_relative 'collection/last'
 require_relative 'collection/sort'
 
+require_relative 'file/basename'
+require_relative 'file/extname'
+
 require_relative 'filter/by_key_record_value'
 require_relative 'filter/by_key_value'
 require_relative 'filter/by_key_value_presence'
@@ -19,7 +22,10 @@ require_relative 'filter/inactive'
 
 require_relative 'format/date'
 require_relative 'format/lowercase'
+require_relative 'format/pad'
 require_relative 'format/remove_whitespace'
+require_relative 'format/sha256'
+require_relative 'format/split'
 require_relative 'format/string_replace'
 require_relative 'format/string_template'
 require_relative 'format/substring'
@@ -27,6 +33,7 @@ require_relative 'format/uppercase'
 
 require_relative 'logical/switch'
 
+require_relative 'type/array'
 require_relative 'type/boolean'
 require_relative 'type/string'
 
@@ -52,6 +59,9 @@ module Realize
     register 'r/collection/last',              Collection::Last
     register 'r/collection/sort',              Collection::Sort
 
+    register 'r/file/basename',                File::Basename
+    register 'r/file/extname',                 File::Extname
+
     register 'r/filter/by_key_record_value',   Filter::ByKeyRecordValue
     register 'r/filter/by_key_value',          Filter::ByKeyValue
     register 'r/filter/by_key_value_presence', Filter::ByKeyValuePresence
@@ -59,7 +69,10 @@ module Realize
 
     register 'r/format/date',                  Format::Date
     register 'r/format/lowercase',             Format::Lowercase
+    register 'r/format/pad',                   Format::Pad
     register 'r/format/remove_whitespace',     Format::RemoveWhitespace
+    register 'r/format/sha256',                Format::Sha256
+    register 'r/format/split',                 Format::Split
     register 'r/format/string_replace',        Format::StringReplace
     register 'r/format/string_template',       Format::StringTemplate
     register 'r/format/substring',             Format::Substring
@@ -67,6 +80,7 @@ module Realize
 
     register 'r/logical/switch',               Logical::Switch
 
+    register 'r/type/array',                   Type::Array
     register 'r/type/boolean',                 Type::Boolean
     register 'r/type/string',                  Type::String
 

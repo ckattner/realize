@@ -8,6 +8,7 @@
 #
 
 require 'acts_as_hashable'
+require 'digest'
 require 'objectable'
 require 'securerandom'
 require 'stringento'

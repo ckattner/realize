@@ -16,33 +16,33 @@ RSpec.describe Realize::Collection::Sort do
 
   let(:one) do
     {
-      'id': 1,
-      'date': '2020-01-01',
-      'name': 'first'
+      id: 1,
+      date: '2020-01-01',
+      name: 'first'
     }
   end
 
   let(:two) do
     {
-      'id': 2,
-      'date': '2020-02-10',
-      'name': 'second'
+      id: 2,
+      date: '2020-02-10',
+      name: 'second'
     }
   end
 
   let(:three) do
     {
-      'id': 3,
-      'date': '2020-03-07',
-      'name': 'third'
+      id: 3,
+      date: '2020-03-07',
+      name: 'third'
     }
   end
 
   let(:four) do
     {
-      'id': 4,
-      'date': '2020-02-07',
-      'name': 'fourth'
+      id: 4,
+      date: '2020-02-07',
+      name: 'fourth'
     }
   end
 
@@ -64,8 +64,8 @@ RSpec.describe Realize::Collection::Sort do
         expect(subject.transform(resolver, value, time, value)).to eq(asc_sorted_by_dates)
       end
       it 'when value is not an array' do
-        expect(subject.transform(resolver, { "id": 12, "date": '2020-01-01' }, time, value))
-          .to eq([{ "id": 12, "date": '2020-01-01' }])
+        expect(subject.transform(resolver, { id: 12, date: '2020-01-01' }, time, value))
+          .to eq([{ id: 12, date: '2020-01-01' }])
       end
       specify 'integers' do
         subject = described_class.new(key: 'id', order: 'desc')

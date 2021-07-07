@@ -14,22 +14,22 @@ RSpec.describe Realize::Collection::Last do
 
   let(:first_object) do
     {
-      'id': 1,
-      'name': 'apple'
+      id: 1,
+      name: 'apple'
     }
   end
 
   let(:second_object) do
     {
-      'id': 2,
-      'name': 'orange'
+      id: 2,
+      name: 'orange'
     }
   end
 
   let(:third_object) do
     {
-      'id': 3,
-      'name': 'banana'
+      id: 3,
+      name: 'banana'
     }
   end
 

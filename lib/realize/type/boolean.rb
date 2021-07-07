@@ -22,10 +22,8 @@ module Realize
       def transform(_resolver, value, _time, _record)
         if nullable && value.nil?
           nil
-        elsif truthy?(value)
-          true
         else
-          false
+          truthy?(value)
         end
       end
 

@@ -11,6 +11,7 @@ require_relative 'collection/at_index'
 require_relative 'collection/first'
 require_relative 'collection/last'
 require_relative 'collection/sort'
+require_relative 'collection/join'
 
 require_relative 'file/basename'
 require_relative 'file/extname'
@@ -58,6 +59,7 @@ module Realize
     register 'r/collection/first',             Collection::First
     register 'r/collection/last',              Collection::Last
     register 'r/collection/sort',              Collection::Sort
+    register 'r/collection/join',              Collection::Join
 
     register 'r/file/basename',                File::Basename
     register 'r/file/extname',                 File::Extname

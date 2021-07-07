@@ -27,7 +27,7 @@ RSpec.describe Realize::Filter::ByKeyValue do
       end
 
       it 'matches on record with different-typed key and exact value' do
-        record    = { 'likes_HONEY_mustard': 'i do!' }
+        record    = { likes_HONEY_mustard: 'i do!' }
         expected  = []
 
         expect(subject.transform(resolver, record, time, record)).to eq(expected)
@@ -36,14 +36,14 @@ RSpec.describe Realize::Filter::ByKeyValue do
 
     context 'case-sensitivity' do
       it 'does not match on record with exact key and different-cased value' do
-        record    = { 'likes_honey_mustard': 'i DO!' }
+        record    = { likes_honey_mustard: 'i DO!' }
         expected  = []
 
         expect(subject.transform(resolver, record, time, record)).to eq(expected)
       end
 
       it 'does not match on record with different-cased key and exact value' do
-        record    = { 'likes_HONEY_mustard': 'i do!' }
+        record    = { likes_HONEY_mustard: 'i do!' }
         expected  = []
 
         expect(subject.transform(resolver, record, time, record)).to eq(expected)

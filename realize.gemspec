@@ -11,8 +11,8 @@ Gem::Specification.new do |s|
     Derive and transform a value using a configuration-first pipeline.
   DESCRIPTION
 
-  s.authors     = ['Matthew Ruggio', 'Dan Dewar']
-  s.email       = ['mruggio@bluemarblepayroll.com', 'ddewar@bluemarblepayroll.com']
+  s.authors     = ['Matthew Ruggio', 'Dan Dewar', 'John Bosko']
+  s.email       = ['mruggio@bluemarblepayroll.com', 'ddewar@bluemarblepayroll.com', 'jbosko@bluemarblepayroll.com']
   s.files       = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   s.bindir      = 'exe'
   s.executables = []
@@ -36,7 +36,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency('pry', '~>0')
   s.add_development_dependency('rake', '~> 13')
   s.add_development_dependency('rspec')
-  s.add_development_dependency('rubocop', '~>1.1')
+  s.add_development_dependency('rubocop', '~>1.1', '>=1.18.1')
   s.add_development_dependency('simplecov', '~>0.17.0')
   s.add_development_dependency('simplecov-console', '~>0.6.0')
 end

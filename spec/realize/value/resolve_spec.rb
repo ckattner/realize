@@ -20,7 +20,7 @@ RSpec.describe Realize::Value::Resolve do
     context 'when value is an array' do
       it 'selects first record for value resolution' do
         value     = 'i do!'
-        record    = [{ 'likes_honey_mustard': value }]
+        record    = [{ likes_honey_mustard: value }]
         expected  = value
 
         expect(subject.transform(resolver, record, time, record)).to eq(expected)
@@ -30,7 +30,7 @@ RSpec.describe Realize::Value::Resolve do
     context 'when value is not an array' do
       it 'uses value as a record for value resolution' do
         value     = 'i do!'
-        record    = { 'likes_honey_mustard': value }
+        record    = { likes_honey_mustard: value }
         expected  = value
 
         expect(subject.transform(resolver, record, time, record)).to eq(expected)

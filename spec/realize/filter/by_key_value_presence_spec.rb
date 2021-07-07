@@ -32,21 +32,21 @@ RSpec.describe Realize::Filter::ByKeyValuePresence do
     end
 
     it 'does not match record with different type of key (symbol not string) but has value' do
-      record    = { 'likes_honey_mustard': '' }
+      record    = { likes_honey_mustard: '' }
       expected  = []
 
       expect(subject.transform(resolver, record, time, record)).to eq(expected)
     end
 
     it 'does not match record without key' do
-      record    = { 'something_else': 'abc' }
+      record    = { something_else: 'abc' }
       expected  = []
 
       expect(subject.transform(resolver, record, time, record)).to eq(expected)
     end
 
     it 'matches on record with exact key and a present value' do
-      record    = { 'likes_honey_mustard': 'abc' }
+      record    = { likes_honey_mustard: 'abc' }
       expected  = [record]
 
       expect(subject.transform(resolver, record, time, record)).to eq(expected)

@@ -1,4 +1,10 @@
-# 1.5.0 (TBD)
+# 1.6.0 (July 7th, 2021)
+
+New Transformers:
+
+* r/collection/join
+
+# 1.5.0 (November 24th, 2020)
 
 New Transformers:
 

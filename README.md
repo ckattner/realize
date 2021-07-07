@@ -64,6 +64,7 @@ Here is a list of each built-in transformer, their options, and what their funct
 
 * **r/collection/at_index** [index]:  Takes an array (or coerces value to an array) and returns the value at the given index position.
 * **r/collection/first** []:  Takes an array (or coerces value to an array) and returns the value at the first index position.
+* **r/collection/join** [separator, start_index, end_index]:  Takes an array (or coerces value to an array) and returns a new string by concatenating all the elements of the array by a separator character. Can also specifiy which elements to start from and end to that will make up the returned string.
 * **r/collection/last** []:  Takes an array (or coerces value to an array) and returns the value at the last index position.
 * **r/collection/sort** [key, direction]:  Takes an array (or coerces value to an array) and sort it either ascending or descending by some defined key's value.
 

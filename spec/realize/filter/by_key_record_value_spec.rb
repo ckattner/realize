@@ -17,16 +17,16 @@ RSpec.describe Realize::Filter::ByKeyRecordValue do
 
   let(:record) do
     [
-      { "id": 11 },
-      { "id": 12 },
-      { "1d": 13 }
+      { id: 11 },
+      { id: 12 },
+      { '1d': 13 }
     ]
   end
 
   let(:original_record) do
     {
-      "lookup_id": 12,
-      "ids": record
+      lookup_id: 12,
+      ids: record
     }
   end
 
@@ -35,7 +35,7 @@ RSpec.describe Realize::Filter::ByKeyRecordValue do
   describe '#transform' do
     context 'original record matching' do
       it 'matches on record with original record value as key' do
-        expected = [{ "id": 12 }]
+        expected = [{ id: 12 }]
 
         expect(subject.transform(resolver, record, time, original_record)).to eq(expected)
       end
@@ -43,8 +43,8 @@ RSpec.describe Realize::Filter::ByKeyRecordValue do
         expected = []
 
         missing_id_original_record = {
-          "lookup_id": 200,
-          "ids": record
+          lookup_id: 200,
+          ids: record
         }
 
         expect(
